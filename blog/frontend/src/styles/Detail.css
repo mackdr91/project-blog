@@ -1,0 +1,47 @@
+/* Detail.css */
+.post-background {
+    width: 100%;
+    height: 50vh; /* Full viewport height */
+    background-size: cover; /* Covers the full container without distortion */
+    background-position: center; /* Centers the image */
+  
+    justify-content: center;
+    align-items: center; /* Center the PostDetail component vertically and horizontally */
+}
+
+.title-hero {
+    color: white; /* Ensures the text is visible on potentially dark background images */
+    text-align: center; /* Centers the title horizontally */
+    font-size: 2.5rem; /* Sets a large font size for emphasis */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.75); /* Adds shadow to text for better legibility */
+    padding-top: 20vh; /* Adds top padding to move the title down from the top edge */
+    margin: 0; /* Removes default margin to ensure alignment */
+    font-weight: bold; /* Makes the font bold */
+   
+}
+@media (max-width: 768px) {
+    .title-hero {
+        font-size: 1.5rem; /* Smaller font size for smaller screens */
+        padding-top: 15vh; /* Adjust padding to better fit smaller screens */
+    }
+}
+.post-background:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1;
+    height: 50vh;
+}
+
+.title-hero {
+    position: relative; /* Ensures the title is above the overlay */
+    z-index: 2;
+}
+.pd{
+    position: relative; /* Ensures the title is above the overlay */
+    z-index: 2;
+}

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+#card2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns layout */
+    grid-template-rows: auto; /* Adjust row height based on content */
+    column-gap: 20px; /* Space between columns */
+    align-items: start; /* Aligns items at the start of each cell */
+    border-top-right-radius: px; /* Adjust the radius value as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    
+    font-weight: 300;
+    font-optical-sizing: auto;
+    max-width: 100%;
+    margin-left: 2rem;
+    border-bottom: 2px solid #00ff00;
+    background-color: white;
+}
+
+
+
+#card2 .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#card2 img {
+    width: 100%;
+    display: block;  /* Ensures the image behaves as expected */
+    object-fit: cover; /* Cover the content area without distortion */
+}
+
+#card2 .content p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+#card2 .content h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#card2 .image-container {
+    width: 100%;  /* Adjust width as needed */
+    padding-top: 100%;  /* Creates a square aspect ratio */
+    position: relative;  /* For positioning the img absolutely inside this container */
+    overflow: hidden;  /* Hides anything outside the container */
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#card2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+}
+
+@media (max-width: 600px) {
+    #card2 {
+        grid-template-columns: 1fr; /* Stack columns vertically on small screens */
+        grid-template-rows: auto 1fr; /* Adjust rows to accommodate the image and content */
+    }
+    
+    #card2 img {
+        width: 50%; /* Smaller size for images on mobile */
+        height: 50%; /* Maintain square shape */
+        margin: 0 auto; /* Center image horizontally */
+    }
+}
+
+
+.post {
+    margin-bottom: 20px;
+}
+
+
+.link{
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    #card2 {
+        grid-template-columns: 1fr; /* Stack columns vertically */
+        grid-template-rows: auto 1fr; /* Adjust rows to accommodate the image and content */
+        padding: 10px; /* Reduce padding */
+        margin-left: 1rem; /* Reduce left margin */
+    }
+
+    #card2 .image-container {
+        padding-top: 100%; /* Keeps the image container square */
+        width: 100%; /* Full width of the container */
+        position: relative;
+    }
+
+    #card2 img {
+        width: 100%; /* Full width of its container */
+        height: auto; /* Adjust height automatically to maintain aspect ratio */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        object-fit: cover; /* Ensures the image covers the area without distortion */
+    }
+
+    #card2 .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 10px; /* Adds padding inside the content area for spacing */
+    }
+
+    h1, h2, p {
+        font-size: 16px; /* Adjusts font size for better readability on smaller screens */
+    }
+
+    .link {
+        text-decoration: none; /* Removes underline from links */
+        color: inherit; /* Ensures links use the text color of their parent elements */
+        font-size: 18px; /* Slightly larger font size for easier interaction on touch devices */
+    }
+}

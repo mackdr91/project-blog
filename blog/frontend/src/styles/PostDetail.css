@@ -1,0 +1,27 @@
+
+.container {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 150px; /* Top margin for spacing */
+    font-weight: 300;
+}
+
+.card {
+    width: 60%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-top: 0;
+    color: #333;
+    font-family: 'Orbitron', sans-serif;
+}
+
+p {
+    color: #666;
+}
+

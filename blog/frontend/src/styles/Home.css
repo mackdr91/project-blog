@@ -1,0 +1,54 @@
+.grid-container {
+    display: flex;  /* Establishes a flex container */
+    align-items: flex-start;  /* Aligns children (sidebar and main) to the start of the flex container */
+    gap: 20px; /* Adds space between sidebar and main content */
+    padding-right: 7rem; /* Right padding for the container */
+    padding-left: 7rem; /* Left padding for the container */
+}
+
+.sidebar {
+    background-color: white; /* Sets background color of sidebar */
+    padding: 20px; /* Adds padding inside the sidebar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for 3D effect */
+    border-radius: 8px; /* Rounds the corners of the sidebar */
+    flex: 0 0 450px; /* Sidebar width set to 450px and does not grow or shrink */
+    height: 50vh; /* Sets the height of the sidebar */
+    overflow-y: auto; /* Allows scrolling within the sidebar if content overflows */
+}
+
+#hero-title {
+    font-size: 10em; /* Sets a very large font size for the title */
+    display: flex; /* Uses flexbox to center content */
+    justify-content: center; /* Centers content horizontally */
+    margin-top: 5rem; /* Adds top margin to the title */
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 738px) {
+    .grid-container {
+        flex-direction: column; /* Stacks the sidebar and main content vertically */
+        padding-right: 1rem; /* Reduces right padding for smaller screens */
+        padding-left: 1rem; /* Reduces left padding for smaller screens */
+    }
+
+    #hero-title {
+        font-size: 5em; /* Reduces the font size for smaller screens */
+        margin-top: 7rem; /* Reduces the top margin */
+        text-align: center;
+        padding: 2rem;
+    }
+
+    main {
+        width: 100%; /* Ensures main content takes the full width on smaller screens */
+    }
+
+    .sidebar {
+        width: 100%; /* Ensures sidebar takes the full width on smaller screens */
+        height: auto; /* Adjusts height to content */
+        flex: none; /* Removes flex sizing to allow full width */
+    }
+
+    body, h1, h2, h3, p {
+        font-size: 16px; /* Sets a standard font size for text on smaller screens */
+    }
+}

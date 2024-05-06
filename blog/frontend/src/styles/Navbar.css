@@ -1,0 +1,68 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1001;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-logo {
+    font-size: 1.5em; /* Large enough to be readable */
+    text-decoration: none;
+    color: #333;
+}
+
+.menu-icon {
+    display: none;  /* Hidden by default */
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem; /* Space between menu items */
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+}
+
+@media (max-width: 931px) {
+    .menu-icon {
+        display: block; /* Shows the menu icon on small screens */
+    }
+
+    .nav-links {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100vh; /* Full viewport height */
+        flex-direction: column; /* Stack the links vertically */
+        justify-content: center;
+        background-color: #fff; /* Match the navbar background */
+        transform: translateX(-100%); /* Off-screen to the left */
+        transition: transform 0.3s ease; /* Smooth transition */
+        z-index: 1000; /* Below the navbar but above other content */
+        padding-top: 60px; /* Offset from the top where the navbar is */
+    }
+
+    .nav-links.active {
+        transform: translateX(0); /* Bring into view */
+    }
+
+    .nav-item:hover {
+        background-color: #f4f4f4; /* Slight background on hover for better UX */
+    }
+}
